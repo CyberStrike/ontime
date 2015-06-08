@@ -1,0 +1,1 @@
+/Users/chris/.zprezto/runcoms/zlogin
