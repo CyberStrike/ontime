@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  cc: 1
+  cvs: 1
+  expdate: 2016-04-16
+
+two:
+  email: MyString
+  cc: 1
+  cvs: 1
+  expdate: 2016-04-16

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  amount: 1.5
+  startTime: 2016-04-16 11:33:30
+  stateDate: 2016-04-16
+  lat: 1.5
+  lon: 1.5
+
+two:
+  title: MyString
+  amount: 1.5
+  startTime: 2016-04-16 11:33:30
+  stateDate: 2016-04-16
+  lat: 1.5
+  lon: 1.5
