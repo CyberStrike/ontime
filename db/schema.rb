@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416190507) do
+ActiveRecord::Schema.define(version: 20160416195215) do
+
+  create_table "attendances", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "meeting_id"
+    t.boolean  "checked_in"
+    t.boolean  "confirmed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "attendances", ["meeting_id"], name: "index_attendances_on_meeting_id"
+  add_index "attendances", ["user_id"], name: "index_attendances_on_user_id"
 
   create_table "meetings", force: :cascade do |t|
     t.time     "time"
