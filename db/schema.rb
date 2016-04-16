@@ -30,10 +30,10 @@ ActiveRecord::Schema.define(version: 20160416195215) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "user_id"
+    t.integer  "owner_id"
   end
 
-  add_index "meetings", ["user_id"], name: "index_meetings_on_user_id"
+  add_index "meetings", ["owner_id"], name: "index_meetings_on_owner_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
