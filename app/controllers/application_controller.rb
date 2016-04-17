@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
-
-  include DeviseTokenAuth::Concerns::SetUserByToken
   helper_method :current_user
+  include DeviseTokenAuth::Concerns::SetUserByToken
+  skip_before_action :verify_authenticity_token
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -11,14 +11,8 @@ class ApplicationController < ActionController::Base
     render nothing: true
   end
 
-  private
-
-   def current_user
+  def current_user
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
-  use Rack::Cors do
-    origins '*'
-    resource '*', headers: :any, methods: :any
-  end
 end
