@@ -3,7 +3,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :trackable, :validatable,
           :confirmable, :omniauthable
+
   include DeviseTokenAuth::Concerns::User
+
   has_many :meetings
   has_many :meetings, :through => :attendances
   has_many :attendances

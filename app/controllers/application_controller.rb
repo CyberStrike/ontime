@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
-
-  include DeviseTokenAuth::Concerns::SetUserByToken
   helper_method :current_user
+  include DeviseTokenAuth::Concerns::SetUserByToken
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -19,5 +18,5 @@ class ApplicationController < ActionController::Base
     origins '*'
     resource '*', headers: :any, methods: :any
   end
-  
+
 end
