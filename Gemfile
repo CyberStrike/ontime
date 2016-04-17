@@ -17,8 +17,6 @@ gem 'rails', '4.2.6'
 
 
 ## Libraries
-# gem 'devise' # User Authentication
-# gem 'omniauth-facebook
 gem 'thin' # Use Thin as Server
 gem 'rack-cors'
 
