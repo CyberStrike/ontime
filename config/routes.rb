@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
+  root 'users#index'
   resources :meetings
   resources :users
-  root 'users#index'
+  mount_devise_token_auth_for 'User', at: 'auth'
+
+      get 'auth/:provider/callback', to: "sessions#create"
+      get 'sign_out', to: "sessions#destroy", as: 'sign_out'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

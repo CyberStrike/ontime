@@ -1,9 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'oauth'
+# gem 'oauth'
 gem 'jwt'
-
-
+gem 'omniauth-facebook'
+gem 'devise_token_auth'
+gem 'devise'
+gem 'omniauth'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
