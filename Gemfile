@@ -1,19 +1,13 @@
 source 'https://rubygems.org'
-<<<<<<< HEAD
+
 gem 'oauth'
 gem 'jwt'
-=======
-ruby '2.3.0'
->>>>>>> 3c589d4773a538f38a37d9f84c0dc4e226e3f1ba
+
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-
-## Libraries
-gem 'devise' # User Authentication
-gem 'omniauth-facebook'
-gem 'thin' # Use Thin as Server
-
 ## Views
 ####################
 gem 'sass-rails', '~> 4.0.0' # Use SCSS for stylesheets
@@ -43,16 +37,10 @@ group :development do
 end
 
 group :production do
-<<<<<<< HEAD
   gem 'pg'
   gem 'rails_12factor'
   end
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-  gem 'sqlite3'
-end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
@@ -60,14 +48,4 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-=======
-  gem 'puma'
-  gem 'pg' # Postgresql DB
-  gem 'rails_12factor' # Heroku asset handler
-end
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
->>>>>>> 3c589d4773a538f38a37d9f84c0dc4e226e3f1ba
 end

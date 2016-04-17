@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160416195215) do
+ActiveRecord::Schema.define(version: 20160417005501) do
 
   create_table "attendances", force: :cascade do |t|
     t.integer  "user_id"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20160416195215) do
   end
 
   add_index "meetings", ["owner_id"], name: "index_meetings_on_owner_id"
+
+  create_table "oauths", force: :cascade do |t|
+    t.string "token",  null: false
+    t.string "secret", null: false
+  end
+
+  add_index "oauths", ["token"], name: "index_oauths_on_token"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
