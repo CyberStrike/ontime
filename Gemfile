@@ -36,6 +36,7 @@ group :development do
   gem 'better_errors' # Better Errors
   gem 'binding_of_caller' # Better Debugging
   gem 'quiet_assets' # Shhh.. we don't need to see the assets
+  gem 'spring'
 end
 
 group :production do
