@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   helper_method :current_user
   include DeviseTokenAuth::Concerns::SetUserByToken
-  skip_before_action :verify_authenticity_token 
+  skip_before_action :verify_authenticity_token
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
