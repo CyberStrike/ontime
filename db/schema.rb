@@ -36,7 +36,10 @@ ActiveRecord::Schema.define(version: 20160416195215) do
   add_index "meetings", ["owner_id"], name: "index_meetings_on_owner_id"
 
   create_table "users", force: :cascade do |t|
+    t.string   "name"
     t.string   "email"
+    t.string   "provider"
+    t.string   "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
